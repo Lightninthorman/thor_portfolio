@@ -1,0 +1,63 @@
+/* body{
+    background-color: red;
+} */
+
+.triangle-container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    border:1px solid gold;
+}
+
+.triangle-up {
+    position: absolute;
+    z-index: -1;
+    width: 0px;
+    height: 0px;
+    border-left: 110px solid transparent;
+    border-right: 110px solid transparent;
+    border-bottom: 150px solid blue;
+
+}
+
+.subject{
+    margin:10px;
+}
+
+.listItem{
+    position:relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    padding-top:100px;
+
+    width: 220px;
+    height:150px;
+    border: 1px solid black;
+    color:ghostwhite;
+}
+
+.subject-box{
+display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  /* For mobile phones: */
+  .triangle-up{
+      transition: transform 1s;
+  }
+
+  .triangle-click {
+      transform: rotate(180deg);
+  }
+
+  .listItem{
+      transition: padding-top 1s;
+  }
+
+  .listItem-click{
+    padding-top: 30px;
+  }
+}
