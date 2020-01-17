@@ -56,12 +56,12 @@ body{
     align-items: center;
     align-content: center;
     padding-top:100px;
-
+    opacity:100%;
     width: 220px;
     height:150px;
     border: 1px solid black;
     color:ghostwhite;
-    transition: padding-top 1s, transform 1s;
+    transition: padding-top 1s, opacity 1s;
 }
 
 .listItem p {
@@ -75,7 +75,7 @@ body{
 
 .triangle-click {
     transform: rotate(180deg);
-    filter:grayscale(0) blur(0);
+    filter:grayscale(0) blur(0px);
 }
 
 .triangle-hover{
@@ -84,6 +84,7 @@ body{
 
 .listItem-click{
   padding-top: 30px;
+  opacity:0;
 }
 
 .subject-box{
