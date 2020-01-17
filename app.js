@@ -19,6 +19,7 @@ $('.listItem').on('click',(event) => {
         $('.subject-details').fadeOut('slow');
 
 
+
         return;
     }
 
@@ -29,12 +30,13 @@ $('.listItem').on('click',(event) => {
     if($('.triangle-click')[0]){
         $('.triangle-click').removeClass('triangle-click');
         $('.listItem-click').removeClass('listItem-click');
+        $('.subject-box').slideUp(1000);
         $('.subject-details').fadeOut(1000);
         $(`.${subject}`).addClass('triangle-click');
         $(event.currentTarget).addClass('listItem-click');
         setTimeout(() => {
             showSubject(subject)
-        },1000)
+        },1100)
     }else{
         $(`.${subject}`).addClass('triangle-click');
         $(event.currentTarget).addClass('listItem-click');
@@ -48,6 +50,7 @@ $('.listItem').on('click',(event) => {
 //=======
 const showSubject = (subject) => {
     //**Show the approprate content based on selection
+
     $(`[data-details=${subject}]`).fadeIn(1100);
 
     //**Show the display box
@@ -57,6 +60,7 @@ const showSubject = (subject) => {
     $('html,body').animate({
         scrollTop: $('.subject-box').offset().top
     },1000);
+    $('footer').css('top',($(window).height()-100) + 'px');
 }
 
 //=======
@@ -75,6 +79,26 @@ $('.listItem').hover((event) => {
     // $(`.${subject}`).css({'filter':'grayscale(85%)'});
 })
 
+//=======
+//Hover event for subject icons
+//=======
+    //**hover event is made null if screen is too small such as with a phone
+$(window).on('resize',() => {
+        if ($(window).width() <=768) {
+        $('.project-details').css({'display':'block'});
+    }else{
+        $('.project-details').css({'display':'none'});
+    }
+})
+$('.project').hover((event) => {
+    const description =$(event.currentTarget).children()[2];
+    $(description).slideDown('slow');
+},
+(event) => {
+    const description =$(event.currentTarget).children()[2];
+    $(description).slideUp('slow');
+}
+)
 
 
 })

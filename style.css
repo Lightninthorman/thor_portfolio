@@ -11,15 +11,13 @@
 
 body{
     background-color: rgb(115,119,122);
-    color: rgb(236,237,231);
+    color: #37393B;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 20px;
 }
 
-h1{
+h1,h3,h2{
     font-family: 'Raleway', sans-serif;
-}
-
-h3{
-    font-family: var(--titles);
 }
 
 header{
@@ -29,6 +27,14 @@ header{
 header img{
     width:200px;
 }
+
+
+footer {
+    position: absolute;
+    width: 100%;
+    height: 100px;            /* Footer height */
+}
+
 .triangle-container{
     display: flex;
     flex-flow: row wrap;
@@ -108,38 +114,112 @@ header img{
     display: none;
     width:100%;
     background: rgb(253,126,71);
+    margin:50px 0;
+    border-radius: 7px;
+
 }
 
 .subject-details{
     display:none;
     padding: 10px;
-}
-.about{
 
 }
-/*
-.web{
-display: none;
+
+.subject-details-holder{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
 }
 
-.mograph{
-display: none;
+
+.mePicture{
+    width: 200px;
+    height: 200px;
+    background-image: url(images/headshot.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin: 10px;
 }
 
-.resume{
-display: none;
-} */
-@media only screen and (min-width: 768px) {
+.profile{
+    width:60%;
+    color:#37393B;
+}
+
+.profile h1, h2{
+    color:#b4c8d3;
+}
+
+.personal-contact{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.links{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.links a{
+    margin: 0 10px;
+}
+
+.contact span{
+    text-decoration: none;
+    color:white;
+    background: white;
+}
+
+.project-container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.project{
+    text-align: center;
+    width:300px;
+    padding:10px;
+    background-color: rgba(115,119,122,.4);
+    border-radius: 7px;
+    margin: 10px;
+}
+
+.project img{
+    height:200px;
+    margin-bottom: 20px;
+}
+
+.project-container a{
+    text-decoration: none;
+    color: #37393B;
+}
+
+.project-details{
+    display: none;
+    text-align: left;
+    height:300px;
+}
+
+.mograph-container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.video{
+    width: 500px;
+    margin:10px;
+    padding:10px;
+    background-color: rgba(115,119,122,.4);
+    border-radius: 7px;
+}
+@media only screen and (max-width: 768px) {
   /* For mobile phones: */
-  .triangle-up{
-      /* transition: transform 1s; */
-  }
-
-
-
-  .listItem{
-      /* transition: padding-top 1s; */
-  }
 
 
 }
