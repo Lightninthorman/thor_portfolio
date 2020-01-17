@@ -1,6 +1,18 @@
-/* body{
-    background-color: red;
-} */
+@import url('https://fonts.googleapis.com/css?family=Archivo+Narrow|Julius+Sans+One|Source+Sans+Pro&display=swap');
+
+:root{
+    /* font-family: 'Archivo Narrow', sans-serif;
+    font-family: 'Julius Sans One', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif; */
+    --heading: 'Julius Sans One', sans-serif;
+    --titles: 'Archivo Narrow', sans-serif;
+    --text: 'Source Sans Pro', sans-serif;
+}
+
+body{
+    background-color: rgb(115,119,122);
+    color: rgb(236,237,231);
+}
 
 .triangle-container{
     display: flex;
@@ -11,13 +23,25 @@
 
 .triangle-up {
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     z-index: -1;
-    width: 0px;
+    width: 220px;
+    height:150px;
+    filter: drop-shadow(0px 0px 10px rgba(0,0,0,.5));
+    filter: grayscale(85%) blur(2px);
+    transition: transform 1s, filter 0.5s;
+    /* width: 0px;
     height: 0px;
     border-left: 110px solid transparent;
     border-right: 110px solid transparent;
-    border-bottom: 150px solid blue;
+    border-bottom: 150px solid rgb(180,200,211);
+    border-image-source: url(images/background-4.jpg); */
+}
 
+.triangle-up img{
+    height:100%;
 }
 
 .subject{
@@ -37,27 +61,67 @@
     height:150px;
     border: 1px solid black;
     color:ghostwhite;
+    transition: padding-top 1s, transform 1s;
+}
+
+.listItem p {
+    font-weight: bold;
+    /* background-color: rgba(115,119,122,.7); */
+    padding: 2px 4px;
+    color: rgb(20,20,20);
+    border-radius: 7px;
+
+}
+
+.triangle-click {
+    transform: rotate(180deg);
+    filter:grayscale(0) blur(0);
+}
+
+.triangle-hover{
+    transform: scale(1.1);
+}
+
+.listItem-click{
+  padding-top: 30px;
 }
 
 .subject-box{
+    display: none;
+    width:100%;
+    background: rgb(253,126,71);
+}
+
+.subject-details{
+    display:none;
+    padding: 10px;
+}
+.about{
+
+}
+/*
+.web{
 display: none;
 }
 
+.mograph{
+display: none;
+}
+
+.resume{
+display: none;
+} */
 @media only screen and (min-width: 768px) {
   /* For mobile phones: */
   .triangle-up{
-      transition: transform 1s;
+      /* transition: transform 1s; */
   }
 
-  .triangle-click {
-      transform: rotate(180deg);
-  }
+
 
   .listItem{
-      transition: padding-top 1s;
+      /* transition: padding-top 1s; */
   }
 
-  .listItem-click{
-    padding-top: 30px;
-  }
+
 }
