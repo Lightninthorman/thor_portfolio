@@ -8,7 +8,7 @@ $('html,body').scrollTop(0,0);
 //Control the front-page rotation of subject icons when clicked.
 //=======
 $('.listItem').on('click',(event) => {
-    console.log($(event.currentTarget).css('transform'));
+
     //**verify if the item is currently active. If it is, close it.
     if($(event.currentTarget).hasClass('listItem-click')){
         $('.triangle-click').removeClass('triangle-click');
@@ -65,12 +65,12 @@ const showSubject = (subject) => {
 $('.listItem').hover((event) => {
     const subject = $(event.currentTarget).attr('data-subject')
 
-    $(event.currentTarget).css({'transform':'scale(1.1)'});
+    $(event.currentTarget).css({'transform':'scale(1.1)', 'color': 'rgb(253,126,71)'});
     // $(`.${subject}`).css({'filter':'grayscale(85%)'});
 },
 (event) => {
     const subject = $(event.currentTarget).attr('data-subject')
-    $(event.currentTarget).css({'transform':'scale(1)'});
+    $(event.currentTarget).css({'transform':'scale(1)', 'color': '#ABB5D6'});
 
     // $(`.${subject}`).css({'filter':'grayscale(85%)'});
 })

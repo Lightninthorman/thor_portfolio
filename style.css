@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Archivo+Narrow|Julius+Sans+One|Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Archivo+Narrow|Julius+Sans+One|Source+Sans+Pro|Josefin+Sans:400,700|Raleway:400,700&display=swap');
 
 :root{
     /* font-family: 'Archivo Narrow', sans-serif;
@@ -14,11 +14,26 @@ body{
     color: rgb(236,237,231);
 }
 
+h1{
+    font-family: 'Raleway', sans-serif;
+}
+
+h3{
+    font-family: var(--titles);
+}
+
+header{
+    margin:20px 0 100px;
+}
+
+header img{
+    width:200px;
+}
 .triangle-container{
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    border:1px solid gold;
+    /* border:1px solid gold; */
 }
 
 .triangle-up {
@@ -30,7 +45,7 @@ body{
     width: 220px;
     height:150px;
     filter: drop-shadow(0px 0px 10px rgba(0,0,0,.5));
-    filter: grayscale(85%) blur(2px);
+    filter: grayscale(85%) brightness(50%);
     transition: transform 1s, filter 0.5s;
     /* width: 0px;
     height: 0px;
@@ -59,23 +74,25 @@ body{
     opacity:100%;
     width: 220px;
     height:150px;
-    border: 1px solid black;
-    color:ghostwhite;
-    transition: padding-top 1s, opacity 1s;
+    /* border: 1px solid black; */
+    color: #ABB5D6;
+    transition: padding-top 1s, opacity 1s, transform 1s, color 1s;
 }
 
 .listItem p {
     font-weight: bold;
-    /* background-color: rgba(115,119,122,.7); */
+    background-color: rgba(115,119,122,.6);
     padding: 2px 4px;
-    color: rgb(20,20,20);
     border-radius: 7px;
+    font-family: var(--titles);
+    font-size: 24px;
+    font-weight:bold;
 
 }
 
 .triangle-click {
     transform: rotate(180deg);
-    filter:grayscale(0) blur(0px);
+    filter:grayscale(0) brightness(100%);
 }
 
 .triangle-hover{
