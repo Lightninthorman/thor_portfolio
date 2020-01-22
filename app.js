@@ -60,7 +60,7 @@ const showSubject = (subject) => {
     $('html,body').animate({
         scrollTop: $('.subject-box').offset().top
     },1000);
-    $('footer').css('top',($(window).height()-100) + 'px');
+    $('.footer').css('top',($('html,body').height()) + 'px');
 }
 
 //=======
@@ -100,5 +100,20 @@ $('.project').hover((event) => {
 }
 )
 
+//=======
+//Back to top button
+//=======
 
+//*****Show button
+$(window).scroll(() => {
+    if ($(window).scrollTop() > 300) {
+        $('.back-to-top').fadeIn();
+    }else{
+        $('.back-to-top').fadeOut();
+    }
+})
+//*****Scroll to top click event
+    $('.back-to-top').on('click', () => {
+        $('html,body').animate({scrollTop:0});
+    })
 })
