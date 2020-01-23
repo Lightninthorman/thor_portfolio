@@ -217,9 +217,9 @@ footer {
 }
 
 .video{
-    width: 470px;
+    width: 500px;
     margin:10px;
-    padding:10px;
+    padding:20px;
     background-color: rgba(115,119,122,.4);
     border-radius: 7px;
 }
@@ -234,10 +234,24 @@ footer {
     background-color: powderblue;
 }
 
-@media only screen and (max-width: 768px) {
+iframe{
+    width:490px;
+    height:210px;
+}
+
+
+@media only screen and (max-width: 500px) {
   /* For mobile phones: */
 .back-to-top img{
-    width:60px;
+    width:50px;
+}
+
+.video{
+    width:300px;
+}
+
+iframe{
+    width:250px;
 }
 
 }

@@ -84,7 +84,7 @@ $('.listItem').hover((event) => {
 //=======
     //**hover event is made null if screen is too small such as with a phone
 $(window).on('resize',() => {
-        if ($(window).width() <=768) {
+        if ($(window).width() <=768 || $(window).width() === 1024) {
         $('.project-details').css({'display':'block'});
     }else{
         $('.project-details').css({'display':'none'});
