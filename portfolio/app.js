@@ -1,8 +1,16 @@
 console.log('hello');
+
 $(() => {
 $('html,body').scrollTop(0,0);
 
-
+var animation = bodymovin.loadAnimation({
+  container: document.getElementById('lottie'), // Required
+  path: 'data.json', // Required
+  renderer: 'html', // Required
+  loop: true, // Optional
+  autoplay: true, // Optional
+  name: "test1", // Name for future reference. Optional.
+})
 
 //=======
 //Control the front-page rotation of subject icons when clicked.

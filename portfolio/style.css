@@ -9,6 +9,13 @@
     --text: 'Source Sans Pro', sans-serif;
 }
 
+#lottie{
+    width: 1000px;
+    height:600px;
+    background-color: powderblue;
+
+}
+
 body{
     background-color: rgb(115,119,122);
     color: #37393B;
