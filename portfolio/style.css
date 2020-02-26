@@ -1,20 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Archivo+Narrow|Julius+Sans+One|Source+Sans+Pro|Josefin+Sans:400,700|Raleway:400,700&display=swap');
 
-:root{
-    /* font-family: 'Archivo Narrow', sans-serif;
-    font-family: 'Julius Sans One', sans-serif;
-    font-family: 'Source Sans Pro', sans-serif; */
-    --heading: 'Julius Sans One', sans-serif;
-    --titles: 'Archivo Narrow', sans-serif;
-    --text: 'Source Sans Pro', sans-serif;
-}
 
-#lottie{
-    width: 1000px;
-    height:600px;
-    background-color: powderblue;
-
-}
 
 body{
     background-color: rgb(115,119,122);

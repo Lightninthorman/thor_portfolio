@@ -1,65 +1,50 @@
-import React, {useState} from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 
-function Todo(props){
-    return(
-        <div className="todo">
-            {props.todo.text}
-        </div>
-    )
-}
-
-function TodoForm(props){
-    const [value, setValue] = useState('');
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        if(!value){
-            return;
-        }
-        addTodo(value);
-        setValue('')
-    }
+const App = () => {
 
     return(
-        <form onSubmit={handleSubmit}>
-            <input type="text" className="input" value={value} onChange={e => setValue(e.target.value)} />
-        </form>
-    )
-}
-
-function App() {
-  const [todos,setTodos] = useState([
-      {
-          text: 'Learn about React',
-          isCompleted: false
-      },
-      {
-          text: 'Meet friend for lunch',
-          isCompleted: false
-      },
-      {
-          text: 'Build really cool todo app',
-          isCompleted: false
-      }
-  ]);
-
-  const addTodo = text => {
-      const newTodos = [...todos, {text}];
-      setTodos=(newTodos);
-  }
-
-  return(
-    <div className='app'>
-        <div className="todo-list">
-            {todos.map((todo, key)=>(
-                <Todo key={key} index={key} todo={todo}/>
-            ))}
-            <TodoForm addTodo={addTodo}/>
+        <div className="container">
+            <header>
+                <img src="images/ThorLogo.png" alt="Thor_Kuivanen_Web_Developer_Logo" />
+            </header>
+            <main>
+                <div className="triangle-container">
+                    <div className="subject">
+                        <div className="triangle-up">
+                            <img src="images/background-1.png" alt="About_me_selector" />
+                        </div>
+                        <div className="listItem" data-subject="about">
+                            <p>About Me</p>
+                        </div>
+                    </div>
+                    <div className="subject">
+                        <div className="triangle-up">
+                            <img src="images/background-2.png" alt="Web_projects_selector" />
+                        </div>
+                        <div className="listItem " data-subject="web">
+                            <p>Web Projects</p>
+                        </div>
+                    </div>
+                    <div className="subject">
+                        <div className="triangle-up" >
+                            <img src="images/background-4.png" alt="Mograph_projects_selector" />
+                        </div>
+                        <div className="listItem " data-subject="mograph">
+                            <p>MoGraph Projects</p>
+                        </div>
+                    </div>
+                    <div className="subject">
+                        <div className="triangle-up">
+                            <img src="images/background-3.png" alt="Resume_selector" />
+                        </div>
+                        <div className="listItem" data-subject="resume">
+                            <p>Resume</p>
+                        </div>
+                    </div>
+                </div>
+            </main>
         </div>
-    </div>
-  )
+    )
 }
 
 export default App;
