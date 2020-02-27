@@ -1,0 +1,66 @@
+{
+    "triangleImg":[
+        "images/background-1.png",
+        "images/background-2.png",
+        "images/background-4.png",
+        "images/background-3.png"
+    ],
+    "triangleSubject":[
+        {
+            "title":"About Me",
+            "id":"about"
+        },{
+            "title":"Web Projects",
+            "id":"web"
+        },{
+            "title":"MoGraph Projects",
+            "id":"mograph"
+        },{
+            "title":"Resume",
+            "id":"resume"
+        }
+    ],
+    "webProjects":
+        {
+            "clients":[
+                {
+                    "title":"Piscataqua Marina",
+                    "link":"https://www.piscataquamarina.com/",
+                    "description":"This was built for a local marina changing ownership and looking for a new website.",
+                    "image":"/images/piscataquaMarina.png",
+                    "tools":"React | Bootstrap"
+                }
+            ],
+            "projects":[
+                {
+                    "title":"The Fickle Parent",
+                    "link":"https://github.com/Lightninthorman/vulture",
+                    "description":"My bootcamp final project. A journal and kid ranking system for parents. No need to guess who your favorite is, the data doesn't lie.",
+                    "image":"images/fickleparent.png",
+                    "tools":"React | PostgreSQL | Apache | PHP | ChartJS | SendGrid | Firebase Authentication"
+                },
+                {
+                    "title":"Vulture",
+                    "link":"https://github.com/Lightninthorman/vulture",
+                    "description":"A tongue in cheek app to help people in an office find leftover food from meetings.",
+                    "image":"images/vulture.png",
+                    "tools":"Node.js | Mongoose | Express | EJS | Bootstrap"
+                },
+                {
+                    "title":"World Explorer",
+                    "link":"https://github.com/yortortle/FavoriteLocationsApp",
+                    "description":"Group project allowing users to save, like, and favorite different locations. I built the search and filter functionality, as well as the like and heart functionality.",
+                    "image":"images/worldexplorer.png",
+                    "tools":"AngularJs | Mongoose | Express | Bootstrap | JQuery"
+                },
+                {
+                    "title":"Llam-o-rama",
+                    "link":"https://github.com/Lightninthorman/llam-o-rama",
+                    "description":"ue to timing constraints my partner's original brilliant llama dating site was turned into a llama themed online store.",
+                    "image":"images/llamorama.png",
+                    "tools":"React | PostgreSQL | Apache | PHP | Javascript"
+                }
+            ]
+        }
+
+}
