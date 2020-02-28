@@ -56,11 +56,34 @@
                 {
                     "title":"Llam-o-rama",
                     "link":"https://github.com/Lightninthorman/llam-o-rama",
-                    "description":"ue to timing constraints my partner's original brilliant llama dating site was turned into a llama themed online store.",
+                    "description":"Due to timing constraints my partner's original brilliant llama dating site was turned into a llama themed online store.",
                     "image":"images/llamorama.png",
                     "tools":"React | PostgreSQL | Apache | PHP | Javascript"
                 }
             ]
+        },
+    "mographProjects":[
+        {
+            "title":"Adam & Eve Music Video",
+            "link":"https://player.vimeo.com/video/362767882",
+            "description":"Project for a local musician. I wanted to combine live footage with my mograph project. I had my second child during this project, which made finding free time a bit of a challenge."
+        },
+        {
+            "title":"2018 MBCC Promo",
+            "link":"https://player.vimeo.com/video/247369778",
+            "description":"I volunteered to create this promo for the Massachusetts Breast Cancer Coalition. I also made a spanish version."
+        },
+        {
+            "title":"Futura Project",
+            "link":"https://player.vimeo.com/video/238440811",
+            "description":"A fun project for a course I was taking in video production. In theory this was based on the font type Futura, but I came up with the idea first then figured a way to connect it to the font."
+        },
+        {
+            "title":"Demon Face",
+            "link":"https://player.vimeo.com/video/385562246",
+            "description":"Just a simple test to see if I could learn how to do some face distortion. Sound effects added for the heck of it. Don't be scared."
         }
+    ]
+
 
 }
