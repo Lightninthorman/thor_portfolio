@@ -12,7 +12,6 @@ const App = () => {
     const [pageDisplay, setPageDisplay] = useState(null)
 
     function changeSubject(selectedSubject) {
-        console.log(subject,selectedSubject);
         if (subject === null) {
             triangleClassChange(selectedSubject);
             renderSubject(selectedSubject);

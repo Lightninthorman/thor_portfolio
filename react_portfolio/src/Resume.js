@@ -11,7 +11,7 @@ const Resume = () => {
                 <p>Click on the button below to download my resume or visit my LinkedIn profile:</p>
                 <div>
                     <a href="images/ArthurKuivanenResume.pdf" className="btn btn-outline-dark mx-4" download>Resume</a>
-                    <a  href="https://www.linkedin.com/in/arthur-kuivanen/" target="_blank"><img src="https://img.icons8.com/metro/40/000000/linkedin.png" /></a>
+                    <a  href="https://www.linkedin.com/in/arthur-kuivanen/" target="_blank" rel="noopener noreferrer"><img src="https://img.icons8.com/metro/40/000000/linkedin.png" alt="LinkedIn" /></a>
                 </div>
             </div>
         </section>

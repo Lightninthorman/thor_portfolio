@@ -26,7 +26,7 @@ const About = () => {
                 return(
 
                     <div key={index} className="col-md-4 mx-2 my-3 rounded itemCard cardContainer">
-                    <a className="cardLink" href={item.link} rel="nofollow" target="_blank" rel="noopener noreferrer">
+                    <a className="cardLink" href={item.link} target="_blank" rel="noopener noreferrer">
                     <h3>{item.title}</h3>
                     <img className="w-75 rounded" src={item.image} alt={item.title} />
                     <p>{item.description}</p>

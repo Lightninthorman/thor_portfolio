@@ -1,25 +1,23 @@
-import React,{useEffect} from 'react';
+import React from 'react';
 
 
 const About = () => {
-
-    const exitAnimation = () => {
-        const element = document.querySelector(".animated");
-        element.classList.remove('animated','slideInRight')
-        element.classList.add('animated','zoomOut');
-    }
-
 
     return(
         <section className="row animated slideInRight justify-content-center">
             <div className="col-md-4 m-3 itemCard rounded">
                 <h1>Thor Kuivanen</h1>
-                <img id="profilePicture" src="/images/headshot.jpg" />
+                <img id="profilePicture" src="/images/headshot.jpg" alt="Thor_Kuivanen_Web_Developer_Headshot" />
                 <div className="profileLinks">
-                    <a  href="https://www.linkedin.com/in/arthur-kuivanen/" target="_blank"><img src="https://img.icons8.com/metro/40/000000/linkedin.png" /></a>
-                    <a  href="https://www.linkedin.com/in/arthur-kuivanen/" target="_blank"><img src="https://img.icons8.com/ios-glyphs/45/000000/github.png" /></a>
+                    <a  href="https://www.linkedin.com/in/arthur-kuivanen/"  target="_blank" rel="noopener noreferrer">
+                        <img src="https://img.icons8.com/metro/40/000000/linkedin.png" alt="LinkedIn" />
+                    </a>
+
+                    <a  href="https://github.com/Lightninthorman?tab=repositories"  target="_blank" rel="noopener noreferrer">
+                        <img src="https://img.icons8.com/ios-glyphs/45/000000/github.png" alt="Github" />
+                    </a>
                 </div>
-                <a className="link" href="mailto:arthur.777@gmail.com"><img src="https://img.icons8.com/material-outlined/24/000000/new-post.png" /> arthur.k777@gmail.com</a>
+                <a className="link" href="mailto:arthur.777@gmail.com"><img src="https://img.icons8.com/material-outlined/24/000000/new-post.png" alt="email" /> arthur.k777@gmail.com</a>
             </div>
             <div className="col-md-6 m-3 itemCard rounded">
 
