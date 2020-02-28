@@ -14,7 +14,8 @@ const App = () => {
     function changeSubject(selectedSubject) {
         console.log(subject,selectedSubject);
         if (subject === null) {
-            renderSubject(selectedSubject)
+            triangleClassChange(selectedSubject);
+            renderSubject(selectedSubject);
         }else{
             //**Jump to top of page before the content disappears and page jumps too fast.
             if(selectedSubject === subject){
@@ -23,36 +24,60 @@ const App = () => {
                     left:0,
                     behavior:'smooth'
                 })
-
-                const element = document.getElementById(selectedSubject);
-                element.classList.remove(selectedSubject,'triangle-down')
             }
 
-            const element = document.querySelector(".animated");
-            element.classList.remove("animated",'slideInRight')
-            element.classList.add("animated",'zoomOut');
+            const element = document.getElementsByTagName("section")[0];
+            element.classList.remove('slideInRight')
+            element.classList.add('zoomOut');
+            triangleClassChange(selectedSubject);
             setTimeout(()=>renderSubject(selectedSubject),
                 500
             );
         }
     }
 
-    function renderSubject(selectedSubject) {
-        const element = document.getElementById(selectedSubject);
-        const subjectCurrentlyDisplayed = document.querySelector(".triangle-down");
+    function triangleClassChange(selectedSubject){
+        const selectedTriangle = document.getElementById(selectedSubject + "Triangle");
+        const currentTriangleTitle= document.getElementById('open');
+        const newTriangleTitle = document.getElementById(selectedSubject).querySelector(".subjectItem")
 
-        if(subjectCurrentlyDisplayed){
-            subjectCurrentlyDisplayed.classList.remove('triangle-down');
+
+        const itemOpen = document.querySelector(".triangle-down");
+
+        // if(selectedSubject === subject){
+        //     console.log(selectedTriangle);
+        //     selectedTriangle.classList.remove("triangle-down")
+        //     currentTriangleTitle.removeAttribute("id","open");
+        //     currentTriangleTitle.classList.remove("fadeOutUp");
+        //     currentTriangleTitle.classList.add("fadeInDown");
+        // }
+
+        if(itemOpen){
+            currentTriangleTitle.removeAttribute("id","open");
+            currentTriangleTitle.classList.remove("fadeOutUp");
+            currentTriangleTitle.classList.add("fadeInDown");
+            itemOpen.classList.remove("triangle-down");
+            if(selectedSubject === subject){
+                return;
+            }
         }
+
+
+
+        selectedTriangle.classList.add("triangle-down");
+        newTriangleTitle.setAttribute("id","open");
+        newTriangleTitle.classList.remove("fadeInDown");
+        newTriangleTitle.classList.add("fadeOutUp");
+    }
+
+
+    function renderSubject(selectedSubject) {
 
         if(selectedSubject === subject ){
             setSubject(null);
             setPageDisplay(null);
-            element.classList.remove(selectedSubject,'triangle-down')
         }else{
             setSubject(selectedSubject);
-
-            element.classList.add(selectedSubject,'triangle-down')
 
             switch(selectedSubject){
                 case 'about':
@@ -110,11 +135,11 @@ const App = () => {
 
                     {buildData.triangleSubject.map((item, index) => {
                         return(
-                            <div className="subject" key={index} onClick={()=>changeSubject(item.id)}>
-                                <div id={item.id} className="triangle triangle-up">
+                            <div id={item.id} className="subject" key={index} onClick={()=>changeSubject(item.id)}>
+                                <div id={item.id+"Triangle"} className="triangle">
                                     <img src= {buildData.triangleImg[index]} alt= {item.title+ " selector"} />
                                 </div>
-                                <div className="subjectItem">
+                                <div className="subjectItem animated">
                                     <p>{item.title}</p>
                                 </div>
                             </div>
