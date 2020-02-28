@@ -10,7 +10,7 @@ const About = () => {
             </div>
             {buildData.webProjects.clients.map((item,index) => {
                 return(
-                    <div key={index} className="col-4 m-3 rounded itemCard">
+                    <div key={index} className="col-md-4 m-3 rounded itemCard">
                     <h3>{item.title}</h3>
                     <img className="w-75 rounded" src={item.image} alt={item.title} />
                     <p>{item.description}</p>

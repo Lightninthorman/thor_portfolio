@@ -127,10 +127,10 @@ const App = () => {
     return(
         <div className="container">
             <header>
-                <img src="images/ThorLogo.png" alt="Thor_Kuivanen_Web_Developer_Logo" />
+                <img className="animated slideInDown" src="images/ThorLogo.png" alt="Thor_Kuivanen_Web_Developer_Logo" />
             </header>
             <main>
-                <div className="triangle-container">
+                <div className="triangle-container animated fadeInDown">
 
                     {buildData.triangleSubject.map((item, index) => {
                         return(
@@ -138,7 +138,7 @@ const App = () => {
                                 <div id={item.id+"Triangle"} className="triangle">
                                     <img src= {buildData.triangleImg[index]} alt= {item.title+ " selector"} />
                                 </div>
-                                <div className="subjectItem animated">
+                                <div className="subjectItem animated fadeInDown">
                                     <p>{item.title}</p>
                                 </div>
                             </div>

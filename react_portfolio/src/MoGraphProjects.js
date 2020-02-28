@@ -13,7 +13,7 @@ const MoGraphProjects = () => {
             </div>
             {buildData.mographProjects.map((item,index) => {
                 return(
-                    <div key={index} className="col-4 m-3 rounded itemCard">
+                    <div key={index} className="col-md-4 m-3 rounded itemCard">
                         <iframe title={item.title} src={item.link}  frameBorder="0" allow="autoplay; fullscreen" allowFullScreen></iframe>
                         <h3>{item.title}</h3>
                         <p>{item.description}</p>
