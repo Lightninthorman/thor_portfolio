@@ -34,10 +34,17 @@
             "projects":[
                 {
                     "title":"The Fickle Parent",
-                    "link":"https://github.com/Lightninthorman/vulture",
+                    "link":"https://github.com/Lightninthorman/fickle-parent-2.0",
                     "description":"My bootcamp final project. A journal and kid ranking system for parents. No need to guess who your favorite is, the data doesn't lie.",
                     "image":"images/fickleparent.png",
                     "tools":"React | PostgreSQL | Apache | PHP | ChartJS | SendGrid | Firebase Authentication"
+                },
+                {
+                    "title":"Linden Commons Treasure Hunt",
+                    "link":"https://github.com/Lightninthorman/lindenHunt",
+                    "description":"COVID-19 is challenging so I taught myself Vue.js whenever the kids were napping. I hid stamps around the neighborhood and built an app for them to go 'treasure' hunting.",
+                    "image":"images/treasureHunt.jpg",
+                    "tools":"Vue.js | Vue Router"
                 },
                 {
                     "title":"Vulture",
